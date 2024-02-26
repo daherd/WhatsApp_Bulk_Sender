@@ -26,11 +26,7 @@ def urlencode(text):
             encoded_text += '%' + '{:02X}'.format(ord(char))
     return encoded_text
 
-# Example usage:
-#text_to_encode = "Hello World! How are you?\nI'm fine, thank you."
-#encoded_text = urlencode(text_to_encode)
-#print("Encoded Text:")
-#print(encoded_text)
+
 
 
 
@@ -86,7 +82,6 @@ def open_file_entry(entry_widget):
 def submit_function(file_entry, message_entry):
     file_path = file_entry.get()
     message = message_entry.get("1.0", tk.END)
-    print(message)
     run_webdriver(file_path, message)
 
 def create_gui():
